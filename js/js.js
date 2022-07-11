@@ -39,3 +39,30 @@ var tc = "Василий";
 var sum = tc;
 console.log(sum);
 
+
+//
+
+var x = 7;
+var y = 8;
+
+if (x > y)
+    console.log("x больше y"); //   alert  - будет выводить в выпадающем меню
+else if (x < y)
+    console.log("x меньше y");
+else
+    console.log("x равно y");
+
+//
+
+var x = 8;
+var y = 12;
+
+if (x > y) {
+    console.log(x + y);
+    console.log(x - y);
+} else {
+    console.log(y / x);
+}
+
+//
+
