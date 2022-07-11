@@ -87,7 +87,16 @@ switch (n) {
         break;
 }
 
+//описание действий пользователя
+function start() {
+    const yes = confirm("Want to play?");
 
-function (start) {
+    if (yes) {
+        play();
+    }
+}
 
+//запускает игру
+function play() {
+    alert();
 }
