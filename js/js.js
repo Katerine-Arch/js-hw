@@ -86,3 +86,8 @@ switch (n) {
         console.log("Good bye");
         break;
 }
+
+
+function (start) {
+
+}
