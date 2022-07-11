@@ -64,5 +64,25 @@ if (x > y) {
     console.log(y / x);
 }
 
-//
+//для условново выбора:
 
+var x = 8;
+var y = 12;
+
+var max = (x > y) ? x : y;
+console.log(max);
+
+//переменная switch + break:
+
+var n = "night";
+switch (n) {
+    case ("night"):
+        console.log("Good night");
+        break;
+    case ("day"):
+        console.log("Good day");
+        break;
+    default:
+        console.log("Good bye");
+        break;
+}
