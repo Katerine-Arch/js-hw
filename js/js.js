@@ -9,7 +9,7 @@
 func1();*/
 
 /*var name = prompt("Enter your name")
-alert("Hi " + name);*/
+alert("Hi " + name);
 
 //var tf = +prompt("t по Фаренгейту");
 
@@ -26,4 +26,16 @@ function func1() {
 }
 func1();
 
-alert("sum");
+alert("sum");*/
+
+
+//1.	Задать температуру в градусах по Цельсию
+var tc = 23;
+var sum = (9 / 5) * tc + 32;
+console.log(sum);
+
+//2.	Объявить две переменные: admin и name. Записать в name строку "Василий"; Скопировать значение из name в admin. Вывести admin (должно вывестись «Василий»).
+var tc = "Василий";
+var sum = tc;
+console.log(sum);
+
