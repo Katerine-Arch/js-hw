@@ -110,7 +110,7 @@ function play() {
 
     //опрос пользователя неограниченное кол-во раз
     while (generated !== entered) {
-        const prompted = Number(prompt(messag: "Enter the number"));
+        const prompted = Number(prompt(messag: "Enter the number")); //+prompt тоже самое, но тут поновее запись
 
         if (isNaN(prompted)) {
             continue;
@@ -120,6 +120,15 @@ function play() {
         attempts++;
 
         switch (compareNumbers(entered, generated)) {
+            case -1:
+                alert("Загаданное число больше ${entered}. Повторите попытку.");
+                break;
+            case 1:
+                alert("Загаданное число меньше ${entered}. Повторите попытку.");
+                break;
+            case 0:
+                alert("Вы отгадали число ${generated} за ${attempts} попыток.");
+                break;
 
         }
     }
@@ -127,4 +136,15 @@ function play() {
 
 function getRandomNumber(min, max) {
     return Math.trunc(x: Math.random() * (max - min) + min);
+}
+
+//ф-ция будет сверять два числа в отдельном блоке
+function compareNumbers(a, b) {
+    if (a < b) {
+        return -1;
+    } else if (a > b) {
+        return 1;
+    } else {
+        return 0;
+    }
 }
