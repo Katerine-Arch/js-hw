@@ -87,16 +87,44 @@ switch (n) {
         break;
 }
 
-//описание действий пользователя
-function start() {
-    const yes = confirm("Want to play?");
+//ИГРА УГАДАЙКА. описание действий пользователя
+const RANDOM_MIN_NUMBER = 1;
+const RANDOM_MAX_NUMBER = 5;
 
-    if (yes) {
-        play();
+function start() {
+    const yes = confirm("Want to play?"); //boolean
+
+    if (!yes) {
+        return;
     }
+
+    play();
 }
 
 //запускает игру
 function play() {
-    alert();
+    const generated = getRandomNumber(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
+
+    let entered = nul; //значение, введеное пользователем
+    let attempts = 0; // кол-во попыток угадывания
+
+    //опрос пользователя неограниченное кол-во раз
+    while (generated !== entered) {
+        const prompted = Number(prompt(messag: "Enter the number"));
+
+        if (isNaN(prompted)) {
+            continue;
+        }
+
+        entered = prompted;
+        attempts++;
+
+        switch (compareNumbers(entered, generated)) {
+
+        }
+    }
+}
+
+function getRandomNumber(min, max) {
+    return Math.trunc(x: Math.random() * (max - min) + min);
 }
