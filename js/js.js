@@ -99,6 +99,7 @@ function start() {
     }
 
     play();
+    start();
 }
 
 //запускает игру
@@ -110,7 +111,7 @@ function play() {
 
     //опрос пользователя неограниченное кол-во раз
     while (generated !== entered) {
-        const prompted = Number(prompt(message: "Enter the number")); //+prompt тоже самое, но тут поновее запись
+        const prompted = Number(prompt(message: 'Enter the number')); //+prompt тоже самое, но тут поновее запись
 
         if (isNaN(prompted)) {
             continue;
@@ -121,13 +122,13 @@ function play() {
 
         switch (compareNumbers(entered, generated)) {
             case -1:
-                alert("Загаданное число больше ${entered}. Повторите попытку.");
+                alert('Загаданное число больше ${entered}. Повторите попытку.');
                 break;
             case 1:
-                alert("Загаданное число меньше ${entered}. Повторите попытку.");
+                alert('Загаданное число меньше ${entered}. Повторите попытку.');
                 break;
             case 0:
-                alert("Вы отгадали число ${generated} за ${attempts} попыток.");
+                alert('Вы отгадали число ${generated} за ${attempts} попыток.');
                 break;
 
         }
