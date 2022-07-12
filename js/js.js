@@ -110,7 +110,7 @@ function play() {
 
     //опрос пользователя неограниченное кол-во раз
     while (generated !== entered) {
-        const prompted = Number(prompt(messag: "Enter the number")); //+prompt тоже самое, но тут поновее запись
+        const prompted = Number(prompt(message: "Enter the number")); //+prompt тоже самое, но тут поновее запись
 
         if (isNaN(prompted)) {
             continue;
