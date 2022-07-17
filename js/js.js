@@ -111,7 +111,7 @@ function play() {
 
     //опрос пользователя неограниченное кол-во раз
     while (generated !== entered) {
-        const prompted = Number(prompt(message: 'Enter the number')); //+prompt тоже самое, но тут поновее запись
+        const prompted = Number(prompt(message: 'Enter the number from ${RANDOM_MIN_NUMBE} to ${RANDOM_MAX_NUMBER}.')); //+prompt тоже самое, но тут поновее запись
 
         if (isNaN(prompted)) {
             continue;
