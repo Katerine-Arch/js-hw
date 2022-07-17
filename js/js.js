@@ -111,13 +111,13 @@ function play() {
 
     //опрос пользователя неограниченное кол-во раз
     while (generated !== entered) {
-        const prompted = Number(prompt(message: 'Enter the number from ${RANDOM_MIN_NUMBE} to ${RANDOM_MAX_NUMBER}.')); //+prompt тоже самое, но тут поновее запись
+        entered = Number(prompt(message: 'Enter the number from ${RANDOM_MIN_NUMBE} to ${RANDOM_MAX_NUMBER}.')); //+prompt тоже самое, но тут поновее запись
 
-        if (isNaN(prompted)) {
+        if (isNaN(entered)) {
             continue;
         }
 
-        entered = prompted;
+        //entered = prompted;
         attempts++;
 
         switch (compareNumbers(entered, generated)) {
@@ -149,3 +149,10 @@ function compareNumbers(a, b) {
         return 0;
     }
 }
+
+//Урок 2. 
+//Чему равен x. x = 5. 
+var a = 2;
+var x = 1 + (a *= 2);
+console.log(x);
+
