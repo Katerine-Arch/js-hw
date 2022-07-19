@@ -156,3 +156,14 @@ var a = 2;
 var x = 1 + (a *= 2);
 console.log(x);
 
+
+function compare_numbers(a, b){
+   if (a >= 0 || b >= 0)
+      alert(a - b);
+   else if (a < 0 || b < 0)
+      alert(a * b);
+   else
+      alert(b + a);
+}
+
+compare_numbers(10, -20);
