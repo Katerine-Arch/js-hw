@@ -182,3 +182,17 @@ if (a < 0 && b < 0) {
 if ((a >= 0 && b < 0) || (a < 0 && b >= 0)) {
     console.log("Сумма = " + (a + b));
 }
+
+// 8.	*С помощью рекурсии организовать функцию возведения числа в степень.
+// Формат: function power(val, pow), где val – заданное число, pow – степень.
+
+function power(val, pow) {
+    if (pow > 0) {
+        return val * power(val, pow - 1);
+    } else if (pow < 0) {
+        return val * power(val, pow + 1);
+    } else
+        return 1;
+}
+
+console.log("2^10 = " + power(2, 10));
