@@ -167,3 +167,18 @@ function compare_numbers(a, b) {
 }
 
 compare_numbers(10, -20);
+
+a = -5;
+b = -8;
+
+if (a >= 0 && b >= 0) {
+    console.log("Разность = " + (a - b));
+}
+
+if (a < 0 && b < 0) {
+    console.log("Произведение = " + (a * b));
+}
+
+if ((a >= 0 && b < 0) || (a < 0 && b >= 0)) {
+    console.log("Сумма = " + (a + b));
+}
