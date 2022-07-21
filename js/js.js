@@ -196,3 +196,10 @@ function power(val, pow) {
 }
 
 console.log("2^10 = " + power(2, 10));
+
+//1.	С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+var n = 100;
+var i = 1;
+while (i <= n) {
+    console.log(i++);  // console.log() – выводит в браузер инфо
+}
