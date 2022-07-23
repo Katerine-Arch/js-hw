@@ -28,7 +28,7 @@ func1();
 
 alert("sum");*/
 
-
+/*
 //1.	Задать температуру в градусах по Цельсию
 var tc = 23;
 var sum = (9 / 5) * tc + 32;
@@ -86,6 +86,7 @@ switch (n) {
         console.log("Good bye");
         break;
 }
+*/
 
 //ИГРА УГАДАЙКА. описание действий пользователя
 const RANDOM_MIN_NUMBER = 1;
@@ -98,12 +99,12 @@ function start() {
         return;
     }
 
-    play();
+    playGame();
     start();
 }
 
 //запускает игру
-function play() {
+function playGame() {
     const generated = getRandomNumber(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
 
     let entered = nul; //значение, введеное пользователем
@@ -135,6 +136,7 @@ function play() {
     }
 }
 
+/*
 function getRandomNumber(min, max) {
     return Math.trunc(x: Math.random() * (max - min) + min);
 }
@@ -149,6 +151,8 @@ function compareNumbers(a, b) {
         return 0;
     }
 }
+
+
 
 //Урок 2. 
 //Чему равен x. x = 5. 
@@ -165,6 +169,8 @@ function compare_numbers(a, b) {
     else
         alert(b + a);
 }
+
+
 
 compare_numbers(10, -20);
 
@@ -203,3 +209,4 @@ var i = 1;
 while (i <= n) {
     console.log(i++);  // console.log() – выводит в браузер инфо
 }
+* /
