@@ -136,7 +136,7 @@ function playGame() {
     }
 }
 
-/*
+
 function getRandomNumber(min, max) {
     return Math.trunc(x: Math.random() * (max - min) + min);
 }
@@ -152,7 +152,7 @@ function compareNumbers(a, b) {
     }
 }
 
-
+/*
 
 //Урок 2. 
 //Чему равен x. x = 5. 
