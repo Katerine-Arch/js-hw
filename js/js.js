@@ -112,7 +112,7 @@ function playGame() {
 
     //опрос пользователя неограниченное кол-во раз
     while (generated !== entered) {
-        entered = Number(prompt(message: 'Enter the number from ${RANDOM_MIN_NUMBE} to ${RANDOM_MAX_NUMBER}.')); //+prompt тоже самое, но тут поновее запись
+        //entered = Number(prompt(message: 'Enter the number from ${RANDOM_MIN_NUMBE} to ${RANDOM_MAX_NUMBER}.')); //+prompt тоже самое, но тут поновее запись
 
         if (isNaN(entered)) {
             continue;
