@@ -89,7 +89,7 @@ switch (n) {
 */
 
 //ИГРА УГАДАЙКА. описание действий пользователя
-const RANDOM_MIN_NUMBER = 1;
+/*const RANDOM_MIN_NUMBER = 1;
 const RANDOM_MAX_NUMBER = 5;
 
 function start() {
@@ -152,7 +152,7 @@ function compareNumbers(a, b) {
     }
 }
 
-/*
+
 
 //Урок 2. 
 //Чему равен x. x = 5. 
@@ -210,3 +210,109 @@ while (i <= n) {
     console.log(i++);  // console.log() – выводит в браузер инфо
 }
 * /
+
+
+ /*решение в 3м занятии*/
+const RANDOM_MIN_NUMBER = 1;
+const RANDOM_MAX_NUMBER = 5;
+const NUMBER_OF_DIGITS = 4;
+
+function start() {
+    const yes = confirm("Хотите сыграть в игру?")
+    if (!yes) {
+        return;
+    }
+    play();
+    start();
+}
+
+function play() {
+    const generated = getSecretNumber(NUMBER_OF_DIGITS);
+
+    let entered = null;
+    let attempts = 0;
+    let bulls = 0;
+
+    while (bulls === NUMBER_OF_DIGITS) {
+        const prompted = Number(prompt(message: 'Введите число'));
+
+        if (isNaN(Number(prompted))) {
+            continue;
+        }
+
+        entered = prompted.split(separator: '');
+
+        let cows = 0;
+        let bulls = 0;
+        //for (let [digit, index] of generated.entries ()) {
+        for (i = 0; i < generated.length; i++) {
+            if (generated[i] === Number(entered[i])) {
+                bulls += 1;
+            }
+        }
+
+
+    }
+}
+/*(generated !== entered) {
+const prompted = Number(prompt(message: 'Введите число'));
+ 
+if (isNaN(prompted)) {
+       continue;
+   }
+ 
+entered = prompted;
+attempts++;
+}*/
+
+
+entered = prompted;
+attempts++;
+
+switch (compareNumbers(entered, generated)) {
+    case -1:
+        alert('Загаданное число больше ${entered}. Повторите попытку.');
+        break;
+    case 1:
+        alert('Загаданное число меньше ${entered}. Повторите попытку.');
+        break;
+    case 0:
+        alert('Вы отгадали число ${generated} за ${attempts} попыток.');
+        break;
+
+}
+     }
+ }
+
+function getSecretNumber(digits) {
+
+    const secret = [];
+    for (let i = 0; i < digits; i++); {
+        let generated;
+
+        do {
+            generated = getRandomNumber(1, 9);
+        }
+
+        while (secret.includes(generated))
+
+        secret.push(generated);
+    }
+
+    return secret;
+}
+
+
+function getRandomNumber(min, max) {
+    return Math.trunc(x: Math.random() * (max - min) + min);
+}
+
+function compareNumbers(a, b) {
+    if (a < b) {
+        return -1;
+    } else if (a > b) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
