@@ -215,10 +215,11 @@ while (i <= n) {
  /*решение в 3м занятии*/
 const RANDOM_MIN_NUMBER = 1;
 const RANDOM_MAX_NUMBER = 5;
+
 const NUMBER_OF_DIGITS = 4;
 
 function start() {
-    const yes = confirm("Хотите сыграть в игру?")
+    const yes = confirm(`Хотите сыграть в игру?`)
     if (!yes) {
         return;
     }
@@ -234,13 +235,13 @@ function play() {
     let bulls = 0;
 
     while (bulls === NUMBER_OF_DIGITS) {
-        const prompted = Number(prompt(message: 'Введите число'));
+        const prompted = Number(prompt(message: `Введите число`));
 
         if (isNaN(Number(prompted))) {
             continue;
         }
 
-        entered = prompted.split(separator: '');
+        entered = prompted.split(separator: ``);
 
         let cows = 0;
         let bulls = 0;
@@ -271,13 +272,13 @@ attempts++;
 
 switch (compareNumbers(entered, generated)) {
     case -1:
-        alert('Загаданное число больше ${entered}. Повторите попытку.');
+        alert(`Загаданное число больше ${entered}. Повторите попытку.`);
         break;
     case 1:
-        alert('Загаданное число меньше ${entered}. Повторите попытку.');
+        alert(`Загаданное число меньше ${entered}. Повторите попытку.`);
         break;
     case 0:
-        alert('Вы отгадали число ${generated} за ${attempts} попыток.');
+        alert(`Вы отгадали число ${generated} за ${attempts} попыток.`);
         break;
 
 }
@@ -308,11 +309,25 @@ function getRandomNumber(min, max) {
 }
 
 function compareNumbers(a, b) {
+    let result = 0;
+
     if (a < b) {
-        return -1;
+        result = -1;
     } else if (a > b) {
-        return 1;
+        result = 1;
     } else {
-        return 0;
+        result = 0;
     }
+
+    return result;
 }
+
+
+/*if (a < b) {
+  return -1;
+} else if (a > b) {
+  return 1;
+} else {
+  return 0;
+}
+}*/
