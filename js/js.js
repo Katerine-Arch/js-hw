@@ -217,6 +217,7 @@ const RANDOM_MIN_NUMBER = 1;
 const RANDOM_MAX_NUMBER = 5;
 
 const NUMBER_OF_DIGITS = 4;
+const NUMBER_OF_ATTEMPTS = 5;
 
 function start() {
     const yes = confirm(`Хотите сыграть в игру?`)
@@ -234,7 +235,7 @@ function play() {
     let attempts = 0;
     let bulls = 0;
 
-    while (bulls === NUMBER_OF_DIGITS) {
+    while (true) {
         const prompted = Number(prompt(message: `Введите число`));
 
         if (isNaN(Number(prompted))) {
@@ -242,6 +243,7 @@ function play() {
         }
 
         entered = prompted.split(separator: ``);
+        attempts++
 
         let cows = 0;
         let bulls = 0;
@@ -252,6 +254,13 @@ function play() {
             }
         }
 
+        if (attempts === NUMBER_OF_ATTEMPTS && bulls !== NUMBER_OF_DIGITS) {
+            alert('Ты проиграл.');
+        }
+
+        if (attempts === NUMBER_OF_ATTEMPTS || bulls === NUMBER_OF_DIGITS) {
+            alert('Ты выиграл.');
+        }
 
     }
 }
