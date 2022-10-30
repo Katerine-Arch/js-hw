@@ -254,12 +254,23 @@ function play() {
             }
         }
 
+        /* for (i = 0; i < generated.length; i++) {
+           for (let k = 0; k < generated.length; k++){
+                if (generated[i] === generated[k]) {
+             cows += 1;
+                }
+             }
+         }*/
+
+
         if (attempts === NUMBER_OF_ATTEMPTS && bulls !== NUMBER_OF_DIGITS) {
             alert('Ты проиграл.');
+            break;
         }
 
         if (attempts === NUMBER_OF_ATTEMPTS || bulls === NUMBER_OF_DIGITS) {
             alert('Ты выиграл.');
+            break;
         }
 
     }
@@ -291,8 +302,8 @@ switch (compareNumbers(entered, generated)) {
         break;
 
 }
-     }
- }
+    }
+}
 
 function getSecretNumber(digits) {
 
