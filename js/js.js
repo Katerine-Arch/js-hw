@@ -209,10 +209,36 @@ var i = 1;
 while (i <= n) {
     console.log(i++);  // console.log() – выводит в браузер инфо
 }
-* /
 
 
- /*решение в 3м занятии*/
+//урок 4
+var number;
+var object = {};
+function splitNumber(number) {
+    number = prompt('Введите любое число от 0 до 999 в трехзначном формате', '000');
+    while (number == '' || isNaN(number)) {
+        number = prompt('Введите любое число от 0 до 999 в трехзначном формате', '000');
+    }
+    if (number > 999) {
+        document.getElementById('question-1').innerHTML = 'Число не может превышать значения 999!';
+        console.log(object);
+    } else {
+        object = number.split();
+        object.hundreds = number[0];
+        object.dozens = number[1];
+        object.units = number[2];
+        document.getElementById('question-1').innerHTML = 'Число ' + object + ' включает в себя:
+            - сотни: ' + object.hundreds + ';
+        - десятки: ' + object.dozens + ';
+        - единицы: ' + object.units + '; ';
+    }
+}
+splitNumber(number);*/
+
+
+
+
+/*решение в 3м занятии*/
 const RANDOM_MIN_NUMBER = 1;
 const RANDOM_MAX_NUMBER = 5;
 
@@ -284,7 +310,8 @@ if (isNaN(prompted)) {
  
 entered = prompted;
 attempts++;
-}*/
+}
+*/
 
 
 entered = prompted;
@@ -351,3 +378,4 @@ function compareNumbers(a, b) {
   return 0;
 }
 }*/
+
